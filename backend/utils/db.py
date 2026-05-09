@@ -11,8 +11,7 @@ def init_db(db_path):
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
         with sqlite3.connect(db_path) as conn:
             cursor = conn.cursor()
-            # Note: Primary schema is managed via SQLAlchemy models.
-            # This utility remains for legacy raw queries if needed.
+            # Raw initialization logic removed; schema managed by models.py
             conn.commit()
             logger.info("Database initialized successfully.")
     except sqlite3.Error as e:

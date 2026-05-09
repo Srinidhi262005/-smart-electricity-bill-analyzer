@@ -30,7 +30,7 @@ def create_app():
     CORS(app)
     register_blueprints(app)
 
-    init_db(app.config['DATABASE_PATH'])
+    # Initialize the database using SQLAlchemy (Primary ORM)
     init_sqlalchemy_db(app.config['DATABASE_PATH'])
     
     # Serve React app for non-API routes

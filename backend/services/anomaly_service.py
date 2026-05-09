@@ -2,6 +2,10 @@ import numpy as np
 from typing import List, Dict, Any
 
 
+# Constants for statistical thresholds
+Z_SCORE_THRESHOLD = 2.0
+SPIKE_RATIO_THRESHOLD = 1.3
+
 def detect_abnormal_usage(history: List[float]) -> Dict[str, Any]:
     """
     Analyzes consumption history to detect statistical anomalies.
@@ -25,7 +29,7 @@ def detect_abnormal_usage(history: List[float]) -> Dict[str, Any]:
     anomalies = []
 
     # 1. Statistical Spike Detection (Z-Score approximation)
-    if std > 0 and last > (mean + 2 * std) and ratio >= 1.3:
+    if std > 0 and last > (mean + Z_SCORE_THRESHOLD * std) and ratio >= SPIKE_RATIO_THRESHOLD:
         anomalies.append('Significant usage spike detected (statistically outside normal variance).')
     
     # 2. Trend Analysis
