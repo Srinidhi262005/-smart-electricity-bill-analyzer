@@ -30,11 +30,14 @@ def init_db(db_path):
 
 
 def get_db_connection(db_path):
-    """Establishes and returns a database connection."""
+    """Establishes and returns a SQLite connection with Row factory."""
     try:
-        conn = sqlite3.connect(db_path)
-        conn.row_factory = sqlite3.Row
-        return conn
+        if not os.path.exists(db_path):
+            init_db(db_path)
+            
+        connection = sqlite3.connect(db_path)
+        connection.row_factory = sqlite3.Row
+        return connection
     except sqlite3.Error as e:
         logger.error(f"Failed to connect to database: {e}")
         return None

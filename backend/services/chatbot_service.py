@@ -49,8 +49,9 @@ def respond_to_message(message, lang='en'):
     lang_responses = responses.get(lang, responses['en'])
     response_text = lang_responses.get(intent, lang_responses['unknown'])
 
-    # Add time-aware greeting for English 'unknown' intent
-    if lang == 'en' and intent == 'unknown' and current_hour < 12:
-        response_text = f"Good morning! {response_text}"
+    # Professional greeting for English responses during morning hours
+    if lang == 'en' and current_hour < 12:
+        greeting = "Good morning! "
+        return f"{greeting}{response_text}"
 
     return response_text

@@ -1,10 +1,18 @@
 # Smart Electricity Bill Predictor & Analyzer
 
-A full-stack React + Flask application for predicting electricity bills, detecting abnormal usage patterns, extracting meter readings from images, and offering smart savings suggestions.
+A comprehensive full-stack solution designed to empower users with insights into their energy consumption. This application leverages React, Flask, and Machine Learning to provide predictive billing, anomaly detection, and OCR-based meter reading.
+
+## ✨ Key Features
+- **Bill Prediction**: Estimate monthly costs based on unit consumption.
+- **Anomaly Detection**: Identifies unusual usage spikes or inefficient consumption patterns using statistical analysis.
+- **OCR Integration**: Extract meter readings directly from images using Tesseract OCR.
+- **Smart Suggestions**: Context-aware energy-saving tips based on consumption levels.
+- **Multilingual Chatbot**: Interactive support available in English and Telugu.
 
 ## 🚀 Tech Stack
 - **Frontend**: React, Vite, Tailwind CSS
 - **Backend**: Flask, SQLite
+- **Database ORM**: SQLAlchemy
 - **AI/ML**: NumPy (Statistical Analysis), Tesseract OCR
 
 ## 📂 Project Structure
