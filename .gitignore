@@ -1,21 +1,15 @@
 # Python
-venv/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env
-.env.*
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Database
+*.sqlite3
+*.db
 
 # Node
 node_modules/
 dist/
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Generated
-backend/uploads/
-backend/data/

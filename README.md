@@ -2,12 +2,17 @@
 
 A full-stack React + Flask application for predicting electricity bills, detecting abnormal usage patterns, extracting meter readings from images, and offering smart savings suggestions.
 
-## Project structure
+## 🚀 Tech Stack
+- **Frontend**: React, Vite, Tailwind CSS
+- **Backend**: Flask, SQLite
+- **AI/ML**: NumPy (Statistical Analysis), Tesseract OCR
+
+## 📂 Project Structure
 
 - `backend/` - Flask API, ML prediction service, OCR integration, SQLite persistence
 - `frontend/` - React + Vite user interface with bill prediction, usage analyzer, OCR upload, and chatbot
 
-## Getting started
+## 🛠️ Getting Started
 
 ### Backend + frontend single-host setup
 
@@ -30,8 +35,7 @@ A full-stack React + Flask application for predicting electricity bills, detecti
    python app.py
    ```
 
-Then open:
-- `http://localhost:5001`
+The application will be available at: `http://localhost:5001`
 
 ### Optional: use a different port
 
