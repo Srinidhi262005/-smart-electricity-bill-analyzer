@@ -1,6 +1,14 @@
 # Smart Electricity Bill Predictor & Analyzer
 
-A comprehensive full-stack solution designed to empower users with insights into their energy consumption. This application leverages React, Flask, and Machine Learning to provide predictive billing, anomaly detection, and OCR-based meter reading.
+## 📝 Description
+The **Smart Electricity Bill Predictor & Analyzer** is a data-driven application aimed at optimizing energy efficiency for modern households. In an era of rising energy costs, this platform bridges the gap between raw consumption data and actionable financial insights.
+
+By utilizing **Machine Learning** for predictive modeling, the system forecasts monthly expenditures based on real-time unit consumption. It incorporates **Statistical Anomaly Detection** to alert users of unusual spikes—helping identify potential appliance malfunctions or energy wastage. Additionally, the **OCR (Optical Character Recognition)** module simplifies data entry by extracting readings directly from meter photographs, while an AI-powered **Multilingual Chatbot** provides instant support in English and Telugu.
+
+## 🖼️ Visual Output
+Below is a preview of the main application dashboard, showcasing the real-time prediction and usage analysis interface.
+
+![Project Dashboard](frontend/public/dashboard.png)
 
 ## ✨ Key Features
 - **Bill Prediction**: Estimate monthly costs based on unit consumption.

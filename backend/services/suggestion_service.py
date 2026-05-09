@@ -1,4 +1,17 @@
+"""
+Suggestion Service
+Provides intelligent energy-saving tips based on consumption brackets and detected anomalies.
+"""
+
+
 def generate_suggestions(units, anomaly_report=None):
+    """
+    Generates energy-saving recommendations based on usage and patterns.
+    
+    :param units: Current month unit consumption (float)
+    :param anomaly_report: Dict containing results from detect_abnormal_usage (optional)
+    :return: List of strings containing actionable advice
+    """
     units = float(units)
     suggestions = []
 

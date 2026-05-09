@@ -19,14 +19,14 @@ Start-Sleep -Seconds 3
 
 # Test if the server is running
 try {
-    $response = Invoke-WebRequest -Uri "http://localhost:5000/api/health" -TimeoutSec 5
+    $response = Invoke-WebRequest -Uri "http://localhost:5001/api/health" -TimeoutSec 5
     if ($response.StatusCode -eq 200) {
-        Write-Host "✓ Backend server started successfully on http://localhost:5000" -ForegroundColor Green
+        Write-Host "✓ Backend server started successfully on http://localhost:5001" -ForegroundColor Green
         Write-Host "✓ Frontend is served from the same host" -ForegroundColor Green
 
         # Open browser
         Write-Host "Opening browser..." -ForegroundColor Yellow
-        Start-Process "http://localhost:5000"
+        Start-Process "http://localhost:5001"
     }
 } catch {
     Write-Host "✗ Failed to start backend server" -ForegroundColor Red

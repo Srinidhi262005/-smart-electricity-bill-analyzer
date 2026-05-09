@@ -11,18 +11,8 @@ def init_db(db_path):
         os.makedirs(os.path.dirname(db_path), exist_ok=True)
         with sqlite3.connect(db_path) as conn:
             cursor = conn.cursor()
-            cursor.execute(
-                '''
-                CREATE TABLE IF NOT EXISTS bill_records (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    units REAL NOT NULL,
-                    predicted_amount REAL NOT NULL,
-                    actual_amount REAL,
-                    anomaly_flag INTEGER DEFAULT 0,
-                    created_at TEXT DEFAULT CURRENT_TIMESTAMP
-                );
-                '''
-            )
+            # Note: Primary schema is managed via SQLAlchemy models.
+            # This utility remains for legacy raw queries if needed.
             conn.commit()
             logger.info("Database initialized successfully.")
     except sqlite3.Error as e:
